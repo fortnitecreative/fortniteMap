@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RECLAMAR MONEDAS</title>
+</head>
+<body>
+    <div class="row">
+        <button  onclick="menu()">MENU<span></span></button>
+        <button onclick="tienda()">TIENDA<span></span></button>
+        <button onclick="comoGanar()">¿COMO GANAR?<span></span></button>
+        <button class="tab" onclick="reclamarMonedas()">RECLAMAR MONEDAS<span></span></button>
+      </div>
+      
+      <H1>RECLAMAR MONEDAS POR LAS SIGUIENTES OPCIONES:</H1>
+      <H2> -SUPPORT A CREATOR</H2>
+      <H2> -AGREGAR A FAVORITO LA ISLA</H2>
+      <H2> -TIKTOK</H2>
+      <H2>⚠️⚠️PARA RECLAMAR MONEDAS CON ESTAS OPCIONES DEBEN SEGUIRNOS Y HABER DADO LIKE Y COMENTADO EL PRIMER VIDEO DE TIKTOK @willfort1v1⚠️⚠️</H2>
+       <u style="color: aliceblue;"><H1>SUPPORT A CREATOR:</H1></u>
+       <h3>Ingresa tu nombre de fortnite abajo luego de apoyar como creador en fortnite a "WILIAM", Cuidado! si no lo apoyaste y le das a canjear no podras canjear las monedas nunca! Una vez ya canjeado por mas que sigas dandole a continuar solo te dara las monedas una vez!</h3>
+       <textarea style="padding-bottom: 20px;" placeholder="Nombre de Usuario" rows="1"></textarea>
+       <button onclick="alerta()" class="boton">CONTINUAR</button>
+       <u style="color: aliceblue;"><H1>AGREGAR A FAVORITOS LA ISLA:</H1></u>
+       <h3>Ingresa tu nombre de fortnite abajo luego de agregar la isla a favoritos, Cuidado! si no lo agregaste y le das a canjear no podras canjear las monedas nunca! Una vez ya canjeado por mas que sigas dandole a continuar solo te dara las monedas una vez!</h3>
+       <textarea style="padding-bottom: 20px;" placeholder="Nombre de Usuario" rows="1"></textarea>
+       <button onclick="alerta()" class="boton">CONTINUAR</button>
+       <u style="color: aliceblue;"><H1>TIKTOK:</H1></u>
+       <h3>Ingresa tu nombre de fortnite abajo y el link de tu cuenta de tiktok. Se te iran dando las monedas cada mil visitas que obtengas</h3>
+       <textarea style="padding-bottom: 20px;" placeholder="Nombre de Usuario" rows="1"></textarea>
+       <textarea style="padding-bottom: 20px;" placeholder="link tiktok / nombre" rows="1"></textarea>
+       <button onclick="alerta2()" class="boton">CONTINUAR</button>
+      
+      <style>
+        @import url('https://fonts.googleapis.com/css?family=Open%20Sans:800');
+
+:root {
+  --font: 2rem;
+}
+.boton {
+        background-color: green;
+        color: white;
+    }
+textarea {
+        border-radius: 10px; /* Define el radio de las esquinas */
+        border: 1px solid #ccc; /* Añade un borde */
+        padding: 10px; /* Añade espacio alrededor del texto */
+        width: 300px; /* Define el ancho */
+        height: 16; /* Define la altura */
+        resize: none; /* Evita que se pueda redimensionar */
+        outline: none; /* Quita el resaltado al enfocar */
+        background-color: white; /* Fondo blanco */
+    }
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 5rem;
+  background: url('https://www.lego.com/cdn/cs/aboutus/assets/blta2f7045752055c85/JunoEpicNewsroom_Inline_1920x1080_png.png') no-repeat center center fixed;
+  background-color: rgba(0,0,0,0.3);
+  background-blend-mode: color;
+  font-family: 'Open Sans';
+  margin: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-family: 'Open Sans';
+  font-size: var(--font);
+  border-radius: calc(var(--font) * 0.6);
+  padding: calc(var(--font) * 0.5);
+  margin: 0;
+  line-height: 1;
+  position: relative;
+  
+  background-color: transparent;
+  color: white;
+  box-shadow: inset 0 0 0 0 rgb(248, 249, 255, 0.5), inset 0 0 0 0 rgb(248, 249, 255, 0.3), 0 0 0 rgb(248, 249, 255, 0.2);
+  transition: all ease 0.2s;
+}
+
+button:hover {
+  box-shadow: inset 0 0 0 calc(var(--font) * 0.2) rgb(248, 249, 255, 0.5), inset 0 0 calc(var(--font) * 0.2) calc(var(--font) * 0.5) rgb(248, 249, 255, 0.3), 0 0 calc(var(--font) * 0.2) rgb(248, 249, 255, 0.2);
+}
+
+
+button::before {
+  content: '';
+  height: 110%;
+  width: 105%;
+  position: absolute;
+  border-radius: calc(var(--font) * 0.8);
+  background-color: transparent;
+}
+
+@keyframes borders {
+  0%, 100% {border-width: calc(var(--font) * 0.2) calc(var(--font) * 0.1) calc(var(--font) * 0.02) calc(var(--font) * 0.02);}
+  25% { border-width: calc(var(--font) * 0.1) calc(var(--font) * 0.02) calc(var(--font) * 0.02) calc(var(--font) * 0.2);}
+  50% { border-width: calc(var(--font) * 0.02) calc(var(--font) * 0.02) calc(var(--font) * 0.2) calc(var(--font) * 0.1);}
+  75% { border-width: calc(var(--font) * 0.02) calc(var(--font) * 0.2) calc(var(--font) * 0.1) calc(var(--font) * 0.02);}
+}
+
+
+button:hover::before {
+  border: solid rgb(210, 255, 227, 0.8);
+  padding: calc(var(--font) * 0.08);
+  box-shadow: inset 0 0 calc(var(--font) * 0.2) calc(var(--font) * 0.2) rgb(186, 201, 255, 0.3);
+  filter: blur(calc(var(--font) * 0.06));
+  animation: borders infinite 2s linear;
+  opacity: 0.5;
+}
+
+span {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+  display: flex;
+  border-radius: calc(var(--font) * 0.6);
+  z-index: -1;
+}
+
+span::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: linear-gradient(90deg, rgb(248, 249, 255, 0), rgb(206, 216, 255, 0.6), rgb(248, 249, 255, 0));
+  opacity: 0;
+  transform: translateX(-100%);
+  
+}
+
+button:hover > span::after {
+  opacity: 1;
+  transform: translateX(100%);
+  transition: all ease 1s;
+}
+
+.tab {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+/* extra unique buttons */
+.play-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: rgba(0,0,0, 0.2);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+
+
+.play {
+  --font: 3rem;
+  color: black;
+  border-radius: 4rem;
+  height: 12rem;
+  width: 25rem;
+  box-shadow: inset 0 0 0 0 rgb(248, 249, 255, 0.5);
+  border: 1rem solid transparent;
+  position: relative;
+  
+}
+
+.play:hover::before {
+  opacity: 0.2;
+  border-radius: 4rem;
+}
+
+.play > span {
+  background-color: rgb(247, 255, 25);
+  height: 8rem;
+  width: 21rem;
+  border-radius: 2rem;
+}
+
+.play > span::after {
+  display: none;
+}
+
+.play:hover {
+  box-shadow: inset 0 0 0 calc(var(--font) * 0.15) rgb(248, 249, 255, 0.6);
+}
+
+.mode > span {
+  background-color: rgb(200, 204, 205);
+  height: 6rem;
+}
+
+.mode {
+  font-size: 1.5rem;
+  width: 25rem;
+  height: 10rem;
+  top: 2rem;
+}
+
+h1 {
+  color: white;
+  margin: 0;
+  position: relative;
+  top: 1rem;
+  font-style: italic;
+}
+
+h2 {
+  color: white;
+  margin: 0;
+  position: relative;
+  top: 1rem;
+  font-style: italic;
+}
+h3 {
+  color: white;
+  margin: 0;
+  position: relative;
+  top: 1rem;
+  font-style: italic;
+}
+@media screen and (max-width: 800px) {
+  :root {
+    --font: 1.2rem;
+  }
+  body {
+    padding: 1rem;
+  }
+  .play {
+    --font: 2rem;
+    width: 20rem;
+  }
+  .mode {
+    width: 20rem;
+  }
+  .play > span {
+    width:16rem; 
+  }
+}
+      </style>
+      <script>
+        function alerta() {
+            alert("MONEDAS OTORGADAS A SU CUENTA. NO APARECERAN DURANTE EL JUEGO PERO YA LAS TIENE CARGADAS EN NUESTRA BASE DE DATOS. AL COMPRAR ALGO POR MONEDAS SE LE SUMARAN A LA COMPRA")
+        }
+        function alerta2() {
+            alert("PERFECTO. CADA MIL VISITAS SE LE DARAN 50 MONEDAS, LAS MONEDAS NO APARECERAN EN EL JUEGO PERO ESTAN CARGADAS EN NUESTRA BASE DE DATOS, AL COMPRAR ALGO POR MONEDAS SE LE SUMARAN A LA COMPRA")
+        }
+        function menu() {
+            window.location.href = "index.html";
+        }
+        function tienda() {
+            window.location.href = "tienda.html";
+        }
+        function comoGanar() {
+            window.location.href = "comoGanar.html";
+        }
+        function reclamarMonedas() {
+            window.location.href = "reclamarMonedas.html";
+        }
+      </script>
+</body>
+</html>
